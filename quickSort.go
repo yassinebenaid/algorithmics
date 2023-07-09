@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func SortInts(s []int) []int {
+	// steps++
+
 	if len(s) <= 1 {
 		return s
 	}
@@ -29,7 +34,11 @@ func SortInts(s []int) []int {
 }
 
 func TestSortInts() {
-	var ints = []int{5, 4, 8, 6, 7, 3, 2, 1, 44}
+	var ints []int
+
+	for i := 0; i < 10000; i++ {
+		ints = append(ints, rand.Intn(1000))
+	}
 
 	for _, i := range ints {
 		fmt.Print(i, " ")
@@ -42,4 +51,5 @@ func TestSortInts() {
 		fmt.Print(i, " ")
 	}
 	fmt.Println()
+	fmt.Println("steps : ", steps)
 }

@@ -8,6 +8,7 @@ import (
 )
 
 func FindInt(n int, t []int) (i int, ok bool) {
+	// steps++
 
 	low := 0
 	high := len(t) - 1
