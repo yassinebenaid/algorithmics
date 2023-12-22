@@ -6,8 +6,6 @@ import (
 )
 
 func SortInts(s []int) []int {
-	// steps++
-
 	if len(s) <= 1 {
 		return s
 	}
